@@ -1,0 +1,30 @@
+{
+  "canisters": {
+    "bel_backend": {
+      "candid": "src/bel_backend/bel_backend.did",
+      "package": "bel_backend",
+      "type": "rust"
+    },
+    "bel_frontend": {
+      "dependencies": [
+        "bel_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/bel_frontend/src/index.html"
+      },
+      "source": [
+        "src/bel_frontend/assets",
+        "dist/bel_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
